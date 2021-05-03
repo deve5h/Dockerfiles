@@ -1,0 +1,5 @@
+FROM nginx
+
+HEALTHCHECK --interval=10s --timeout=3s \     #using start time and retries as default value
+
+CMD curl -f http://localhost/ || exit 1
